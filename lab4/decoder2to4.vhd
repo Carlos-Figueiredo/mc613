@@ -23,9 +23,9 @@ architecture behavior of decoder2to4 is
 begin
 	Ens <= En & s;
 	with Ens select
-		y <= "1000" when "111",
-				"0100" when "110",
+		y <= "0001" when "100",
 				"0010" when "101",
-				"0001" when "100",
+				"0100" when "110",
+				"1000" when "111",
 				"0000" when OTHERS;
 end behavior;
